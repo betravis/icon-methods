@@ -72,12 +72,18 @@ This page uses a number of different methods to embed icons within the page. If 
 <h2>SVG as Image</h2>
 <img src='farm-animals-rabbit.svg'>
 
+<h2>SVG Spritesheet (viewbox)</h2>
+<img src='farm-animals-sprite.svg#svgView(viewBox(135,0,45,55))'>
+
+<h2>SVG Spritesheet (predefined views)</h2>
+<img src='farm-animals-sprite.svg#rabbit-view'>
+
 <h2>SVG Stack</h2>
 <img src='farm-animals-stack.svg#rabbit'>
 
 <h2>SVG Symbol</h2>
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 55" enable-background="new 0 0 45 55" xml:space="preserve">
-<use xlink:href="farm-animals-symbols.svg#cow-symbol" />
+<use xlink:href="farm-animals-symbols.svg#rabbit-symbol" />
 </svg>
 
 </body>

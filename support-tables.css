@@ -1,0 +1,35 @@
+table.support {
+  display: inline-block;
+  margin: 0 auto; }
+  table.support tr {
+    display: flex;
+    align-items: baseline; }
+    table.support tr:first-child td {
+      padding: .25em; }
+  table.support td {
+    display: block;
+    max-width: 140px;
+    flex: 1;
+    text-align: center;
+    padding: 0.25em;
+    margin: .2em;
+    border: none;
+    background-clip: padding-box;
+    border-radius: .15em; }
+    table.support td img {
+      border: none;
+      margin: 0;
+      box-shadow: none;
+      background: none;
+      width: 100%;
+      vertical-align: bottom; }
+    table.support td.highlight {
+      border: 0.15em solid #fcf9f7;
+      margin: .05em;
+      border-radius: .25em; }
+  table.support .support {
+    background-color: #8fa971; }
+  table.support .partial-support {
+    background-color: #e8c373; }
+  table.support .no-support {
+    background-color: #d87363; }

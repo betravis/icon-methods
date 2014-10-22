@@ -4,8 +4,9 @@
     <title>SVG Sprite Sheet Methods</title>
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <link href='support-tables.css' rel='stylesheet' type='text/css'>
     <style>
-    img {
+    .full, .single {
         border: .2em solid #ccc;
     }
     .full {
@@ -65,6 +66,30 @@
 <img class='single' src='bunny-sprite-sheet.svg#sad-bunny'>
 </figure>
 
+<h2>Browser Support</h2>
+<table class="support">
+    <tr>
+        <td><img src="browser-logos.svg#internet-explorer"></td>
+        <td><img src="browser-logos.svg#firefox"></td>
+        <td><img src="browser-logos.svg#chrome"></td>
+        <td><img src="browser-logos.svg#safari"></td>
+        <td><img src="browser-logos.svg#opera"></td>
+        <td><img src="browser-logos.svg#ios"></td>
+        <td><img src="browser-logos.svg#android"></td>
+    </tr>
+    <tr>
+        <td class='support'>9</td>
+        <td class='support'>32</td>
+        <td class='support'>38</td>
+        <td class='support'>7.1</td>
+        <td class='support'>25</td>
+        <td class='support'>8</td>
+        <td class='no-support'>4.4</td>
+    </tr>
+</table>
+<p>Browser support should roughly map to support for <a href="http://caniuse.com/#feat=svg-fragment">SVG fragment identifiers</a>. FF, CR, O versions were only tested for the current release. IE 9 worked, though support is only listed on caniuse as 10 and up. Support is new for the Safari 7.1/iOS 8 release.</p>
+
+<h2>Credits</h2>
 <p>Icons are public domain from Brad Ashburn over on <a href='http://thenounproject.com/bashburn/'>the Noun Project</a>. Inspired by the comments on a <a href='https://bugs.webkit.org/show_bug.cgi?id=91790'>WebKit bug</a> about fragment identifier support.</p>
 </body>
 </html>

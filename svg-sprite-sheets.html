@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>SVG Spritesheet Methods</title>
+    <title>SVG Sprite Sheet Methods</title>
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
     <style>
@@ -33,14 +33,14 @@
     </style>
 </head>
 <body>
-<h1>SVG Spritesheets</h1>
-<p>Turns out there are a couple nifty ways to use SVG as a spritesheet, mentioned in SVG&rsquo;s <a href='http://www.w3.org/TR/SVG/linking.html#SVGFragmentIdentifiers'>fragment identifier</a> section. From my preliminary testing, they have pretty broad browser support, and by default have all items visible (both advantages over icon stacks, in my opinion).</p>
+<h1>SVG Sprite Sheets</h1>
+<p>Turns out there are a couple nifty ways to use SVG as a sprite sheet, mentioned in SVG&rsquo;s <a href='http://www.w3.org/TR/SVG/linking.html#SVGFragmentIdentifiers'>fragment identifier</a> section. From my preliminary testing, they have pretty broad browser support, and by default have all items visible (both advantages over icon stacks, in my opinion).</p>
 
-<h2>The Original SVG Spritesheet</h2>
+<h2>The Original SVG Sprite Sheet</h2>
 <p>This is the original SVG image, 300 units wide by 100 units tall.</p>
 
 <figure>
-<img class='full' src='bunny-spritesheet.svg'>
+<img class='full' src='bunny-sprite-sheet.svg'>
 </figure>
 
 <h2>With a Custom View Box</h2>
@@ -48,9 +48,9 @@
 <p><code>&lt;img&nbsp;src='bunnies.svg#svgView(viewBox(0,0,100,100))'&gt;</code></p>
 
 <figure>
-<img class='single' src='bunny-spritesheet.svg#svgView(viewBox(0,0,100,100))'>
-<img class='single' src='bunny-spritesheet.svg#svgView(viewBox(100,0,100,100))'>
-<img class='single' src='bunny-spritesheet.svg#svgView(viewBox(200,0,100,100))'>
+<img class='single' src='bunny-sprite-sheet.svg#svgView(viewBox(0,0,100,100))'>
+<img class='single' src='bunny-sprite-sheet.svg#svgView(viewBox(100,0,100,100))'>
+<img class='single' src='bunny-sprite-sheet.svg#svgView(viewBox(200,0,100,100))'>
 </figure>
 
 <h2>With a Custom View</h2>
@@ -60,9 +60,9 @@
 <p><code>&lt;img src='bunnies.svg#carrot-bunny'&gt;</code></p>
 
 <figure>
-<img class='single' src='bunny-spritesheet.svg#carrot-bunny'>
-<img class='single' src='bunny-spritesheet.svg#happy-bunny'>
-<img class='single' src='bunny-spritesheet.svg#sad-bunny'>
+<img class='single' src='bunny-sprite-sheet.svg#carrot-bunny'>
+<img class='single' src='bunny-sprite-sheet.svg#happy-bunny'>
+<img class='single' src='bunny-sprite-sheet.svg#sad-bunny'>
 </figure>
 
 <p>Icons are public domain from Brad Ashburn over on <a href='http://thenounproject.com/bashburn/'>the Noun Project</a>. Inspired by the comments on a <a href='https://bugs.webkit.org/show_bug.cgi?id=91790'>WebKit bug</a> about fragment identifier support.</p>

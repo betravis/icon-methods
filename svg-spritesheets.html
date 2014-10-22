@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+    <title>SVG Spritesheet Methods</title>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <style>
+    img {
+        border: .2em solid #ccc;
+    }
+    .full {
+        width: 15em;
+        height: 5em;
+    }
+    .single {
+        width: 5em;
+        height: 5em;
+    }
+    body {
+        font-family: 'Source Sans Pro';
+        font-size: 120%;
+        line-height: 1.4;
+        max-width: 30em;
+        margin: 0 auto;
+    }
+    code {
+        font-family: 'Source Code Pro';
+        background-color: #ddd;
+    }
+    figure {
+        display: block;
+    }
+    </style>
+</head>
+<body>
+<h1>SVG Spritesheets</h1>
+<p>Turns out there are a couple nifty ways to use SVG as a spritesheet, mentioned in SVG&rsquo;s <a href='http://www.w3.org/TR/SVG/linking.html#SVGFragmentIdentifiers'>fragment identifier</a> section. From my preliminary testing, they have pretty broad browser support, and by default have all items visible (both advantages over icon stacks, in my opinion).</p>
+
+<h2>The Original SVG Spritesheet</h2>
+<p>This is the original SVG image, 300 units wide by 100 units tall.</p>
+
+<figure>
+<img class='full' src='bunny-spritesheet.svg'>
+</figure>
+
+<h2>With a Custom View Box</h2>
+<p>You can set a custom view box on an svg by adding a custom view box fragment identifier to the end of the SVG URL. It would look something like this:</p>
+<p><code>&lt;img&nbsp;src='bunnies.svg#svgView(viewBox(0,0,100,100))'&gt;</code></p>
+
+<figure>
+<img class='single' src='bunny-spritesheet.svg#svgView(viewBox(0,0,100,100))'>
+<img class='single' src='bunny-spritesheet.svg#svgView(viewBox(100,0,100,100))'>
+<img class='single' src='bunny-spritesheet.svg#svgView(viewBox(200,0,100,100))'>
+</figure>
+
+<h2>With a Custom View</h2>
+<p>You can also target a predefined <a href='http://www.w3.org/TR/SVG/linking.html#ViewElement'>view element</a> that encapsulates this information. In your SVG you would drop:</p>
+<p><code>&lt;view id='carrot-bunny' viewBox='0 0 100 100' /&gt;</code></p>
+<p>Which can then be used in HTML like so:</p>
+<p><code>&lt;img src='bunnies.svg#carrot-bunny'&gt;</code></p>
+
+<figure>
+<img class='single' src='bunny-spritesheet.svg#carrot-bunny'>
+<img class='single' src='bunny-spritesheet.svg#happy-bunny'>
+<img class='single' src='bunny-spritesheet.svg#sad-bunny'>
+</figure>
+
+<p>Icons are public domain from Brad Ashburn over on <a href='http://thenounproject.com/bashburn/'>the Noun Project</a>. Inspired by the comments on a <a href='https://bugs.webkit.org/show_bug.cgi?id=91790'>WebKit bug</a> about fragment identifier support.</p>
+</body>
+</html>

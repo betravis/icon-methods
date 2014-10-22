@@ -28,6 +28,10 @@
         font-family: 'Source Code Pro';
         background-color: #ddd;
     }
+    em {
+        font-weight: bold;
+        font-style: initial;
+    }
     figure {
         display: block;
     }
@@ -47,7 +51,7 @@
 <h2>With a Custom View Box</h2>
 <p>You can set a custom view box on an svg by adding a custom view box fragment identifier to the end of the SVG URL. It would look something like this:</p>
 <p><code>&lt;img&nbsp;src='bunnies.svg#svgView(viewBox(0,0,100,100))'&gt;</code></p>
-
+<p><em>Note:</em> You will need to explicitly size the image, as some browsers (CR, S) will not clip to the custom view box.</p>
 <figure>
 <img class='single' src='bunny-sprite-sheet.svg#svgView(viewBox(0,0,100,100))'>
 <img class='single' src='bunny-sprite-sheet.svg#svgView(viewBox(100,0,100,100))'>

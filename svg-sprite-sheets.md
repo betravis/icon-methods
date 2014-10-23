@@ -94,7 +94,7 @@ Using separate query strings looks like:
 
 ## Notes &amp; Credits
 
-SVG sprite sheets are similar to [icon stacks][icon-stacks], and unfortunately suffers similar [wk-bug][issues] in Safari. What I like about this method is that all artwork is visible in the original image, and you don't have to do any style tinkering. You do have to do some offset math though, so you'll have to pick your poison here.
+SVG sprite sheets are similar to [icon stacks][icon-stacks], and unfortunately suffers similar [issues][wk-bug] in Safari. What I like about this method is that all artwork is visible in the original image, and you don't have to do any style tinkering. You do have to do some offset math though, so you'll have to pick your poison here.
 
 Icons are public domain from Brad Ashburn over on [the Noun Project][bashburn]. Inspired by the comments on a [WebKit bug][original-bug] about fragment identifier support.
 

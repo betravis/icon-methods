@@ -1,0 +1,17 @@
+{% comment %}
+Valid browser names are view id's in browser-logos.svg
+internet-explorer, chrome, firefox, safari, opera, ios, android
+{% endcomment %}
+<table class="support">
+<tr>
+{% for browser in include.browser_support %}
+    {% assign icon = browser.name | downcase | replace:' ','-' %}
+    <td><img src="browser-logos.svg#{{ icon }}" alt="{{ browser.name }}" title="{{ browser.name }}"></td>
+{% endfor %}
+</tr>
+<tr>
+{% for browser in include.browser_support %}
+    <td class="{{ browser.support }}">{{ browser.version }}</td>
+{% endfor %}
+</tr>
+</table>

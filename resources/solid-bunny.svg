@@ -1,0 +1,10 @@
+---
+layout: svg
+title: A Stylable Bunny Symbol
+viewBox: 0 0 800 800
+---
+<defs>
+<symbol id="bunny" viewBox="{{ page.viewBox }}">
+{% include solid-bunny.graphic %}
+</symbol>
+</defs>

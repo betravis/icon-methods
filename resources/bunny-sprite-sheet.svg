@@ -1,0 +1,21 @@
+---
+layout: svg
+viewBox: 0 0 300 100
+title: Bunny Sprite Sheet
+---
+
+<view id="carrot-bunny" viewBox="0 0 100 100" />
+<view id="happy-bunny" viewBox="100 0 100 100" />
+<view id="sad-bunny" viewBox="200 0 100 100" />
+
+<g>
+{% include carrot-bunny.graphic %}
+</g>
+
+<g transform="translate(100)">
+{% include happy-bunny.graphic %}
+</g>
+
+<g transform="translate(200)">
+{% include sad-bunny.graphic %}
+</g>

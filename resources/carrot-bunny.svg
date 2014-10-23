@@ -1,6 +1,6 @@
 ---
 layout: svg
 viewBox: 0 0 100 100
-title: Bunny with Carrot
+title: A Bunny with a Carrot
 ---
 {% include carrot-bunny.graphic %}

@@ -1,7 +1,31 @@
 basic:
+  - { name: Internet Explorer, support: support, version: 9 }
+  - { name: Chrome, support: support, version: 37 }
+  - { name: Firefox, support: support, version: 32 }
+  - { name: Safari, support: support, version: 7 }
+  - { name: Opera, support: support, version: 24 }
+  - { name: iOS, support: support, version: 8 }
+  - { name: Android, support: support, version: 4.4 }
+external_symbol:
+  - { name: Internet Explorer, support: support, version: 9 }
+  - { name: Chrome, support: support, version: 37 }
+  - { name: Firefox, support: support, version: 32 }
+  - { name: Safari, support: support, version: 7 }
+  - { name: Opera, support: support, version: 24 }
+  - { name: iOS, support: support, version: 8 }
+  - { name: Android, support: support, version: 4.4 }
+stack:
   - { name: Internet Explorer, support: no-support, version: 11 }
   - { name: Chrome, support: support, version: 37 }
-  - { name: Firefox, support: no-support, version: 32 }
+  - { name: Firefox, support: support, version: 32 }
+  - { name: Safari, support: support, version: 7.1 }
+  - { name: Opera, support: support, version: 24 }
+  - { name: iOS, support: support, version: 8 }
+  - { name: Android, support: no-support, version: 4.4 }
+custom_view_box:
+  - { name: Internet Explorer, support: support, version: 9 }
+  - { name: Chrome, support: support, version: 37 }
+  - { name: Firefox, support: support, version: 32 }
   - { name: Safari, support: support, version: 7.1 }
   - { name: Opera, support: support, version: 24 }
   - { name: iOS, support: support, version: 8 }

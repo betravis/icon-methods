@@ -1,0 +1,82 @@
+---
+---
+body {
+font-family: 'Source Sans Pro';
+font-size: 120%;
+line-height: 1.4;
+max-width: 30em;
+margin: 0 auto;
+}
+
+code {
+font-family: 'Source Code Pro';
+background-color: #ddd;
+}
+
+em {
+font-weight: bold;
+font-style: initial;
+}
+
+figure {
+display: block;
+}
+
+.icon {
+border: .2em solid #ccc;
+}
+
+.single, .double, .triple {
+height: 5em;
+}
+
+.single {
+width: 5em;
+}
+
+.double {
+width: 10em;
+}
+
+.triple {
+width: 15em;
+}
+
+$support-color: lighten(desaturate(#84b24e, 15), 5);
+$partial-support-color: desaturate(#fccb5f, 25);
+$no-support-color: desaturate(#f0614a, 25);
+
+table.support {
+  table-layout: fixed;
+  border-spacing: 0;
+  width: 100%;
+  @for $i from 5 through 8 {
+      .col-#{$i} { width: 100%/$i; }
+  }
+  td {
+    box-sizing: border-box;
+    max-height: 1em;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    padding: 0.25em 0.5em;
+    text-align: center;
+    vertical-align: middle;
+  }
+  tr:first-child {
+    td {
+      padding-top: 0.4em;
+    }
+    td:nth-child(2n + 1) {
+      background-color: #eee;
+    }
+  }
+  .support {
+    background-color: $support-color;
+  }
+  .partial-support {
+    background-color: $partial-support-color;
+  }
+  .no-support {
+    background-color: $no-support-color;
+  }
+}

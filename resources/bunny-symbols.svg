@@ -1,0 +1,18 @@
+---
+layout: svg
+viewBox: 0 0 100 100
+title: Bunny Symbol Library
+---
+<defs>
+<symbol id="carrot-bunny" viewBox="{{ page.viewBox }}">
+{% include carrot-bunny.graphic %}
+</symbol>
+
+<symbol id="happy-bunny" viewBox="{{ page.viewBox }}">
+{% include happy-bunny.graphic %}
+</symbol>
+
+<symbol id="sad-bunny" viewBox="{{ page.viewBox }}">
+{% include sad-bunny.graphic %}
+</symbol>
+</defs>

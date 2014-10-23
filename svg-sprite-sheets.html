@@ -36,9 +36,11 @@ title: SVG Sprite Sheet Methods
 
 <h2>Browser Support</h2>
 {% include browser-support.html browser_support=site.data.support.custom_view_box %}
-<p>Browser support should roughly map to support for <a href="http://caniuse.com/#feat=svg-fragment">SVG fragment identifiers</a>. FF, CR, O versions were only tested for the current release. IE 9 worked, though support is only listed on caniuse as 10 and up. Support is new for the Safari 7.1/iOS 8 release.</p>
+<p>Browser support should roughly map to support for <a href="http://caniuse.com/#feat=svg-fragment">SVG fragment identifiers</a>. FF, CR, O versions were only tested for the current release. IE 9 worked, though support is only listed on caniuse as 10 and up. Support for fragment ids is new for the Safari 7.1/iOS 8 release, but there are still <a href='https://bugs.webkit.org/show_bug.cgi?id=137900'>some issues</a>.</p>
 
 <h2>Notes &amp; Credits</h2>
-<p>SVG sprite sheets are similar to <a href='http://simurai.com/blog/2012/04/02/svg-stacks/'>icon stacks</a>. What I like about this method is that it works in current versions of Safari (there is a <a href='http://webkit.org/b/137900'>bug</a> with icon stacks), and all artwork is visible in the original image. You do have to do some offset math though.</p>
+<p>SVG sprite sheets are similar to <a href='http://simurai.com/blog/2012/04/02/svg-stacks/'>icon stacks</a>. What I like about this method is that <span class='strike'>it works in current versions of Safari (there is a <a href='http://webkit.org/b/137900'>bug</a> with icon stacks)</span>, and all artwork is visible in the original image. You do have to do some offset math though.</p>
+
+<em>Update 10.22:</em> There are at least some cases where this does not work in current versions of Safari. It looks similar to the issue with icon stacks, and I'm investigating further.
 
 <p>Icons are public domain from Brad Ashburn over on <a href='http://thenounproject.com/bashburn/'>the Noun Project</a>. Inspired by the comments on a <a href='https://bugs.webkit.org/show_bug.cgi?id=91790'>WebKit bug</a> about fragment identifier support.</p>

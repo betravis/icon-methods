@@ -26,7 +26,7 @@ custom_view_box:
   - { name: Internet Explorer, support: support, version: 9 }
   - { name: Chrome, support: support, version: 37 }
   - { name: Firefox, support: support, version: 32 }
-  - { name: Safari, support: support, version: 7.1 }
+  - { name: Safari, support: partial-support, version: 7.1 }
   - { name: Opera, support: support, version: 24 }
-  - { name: iOS, support: support, version: 8 }
+  - { name: iOS, support: partial-support, version: 8 }
   - { name: Android, support: no-support, version: 4.4 }

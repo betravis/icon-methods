@@ -6,7 +6,7 @@ internet-explorer, chrome, firefox, safari, opera, ios, android
 <tr>
 {% for browser in include.browser_support %}
     {% assign icon = browser.name | downcase | replace:' ','-' %}
-    <td class="col-{{ include.browser_support | size}}"><img src="resources/browser-logos.svg#{{ icon }}" alt="{{ browser.name }}" title="{{ browser.name }}"></td>
+    <td class="col-{{ include.browser_support | size}}"><img src="resources/{{ icon }}.svg" alt="{{ browser.name }}" title="{{ browser.name }}"></td>
 {% endfor %}
 </tr>
 <tr>

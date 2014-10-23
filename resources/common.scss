@@ -11,6 +11,7 @@ margin: 0 auto;
 code {
 font-family: 'Source Code Pro';
 background-color: #ddd;
+white-space: pre;
 }
 
 em {
@@ -28,6 +29,14 @@ display: block;
 
 .icon {
 border: .2em solid #ccc;
+}
+
+.hack {
+  border: none;
+  margin-right: -5em;
+  & + .icon {
+    background-color: white;
+  }
 }
 
 .single, .double, .triple {

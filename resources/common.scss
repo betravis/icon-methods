@@ -32,8 +32,8 @@ border: .2em solid #ccc;
 }
 
 .hack {
-  border: none;
   margin-right: -5em;
+  border: none;
   & + .icon {
     background-color: white;
   }

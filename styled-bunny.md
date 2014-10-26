@@ -10,8 +10,10 @@ style: "p { text-align: center; }"
 </svg>
 
 Method proposed by [@FWeinb][fweinb] on the [CodePen Blog][codepen-blog].<br/>
-Check out the live demo on [CodePen][codepen-demo].
+Check out the live demo on [CodePen][codepen-demo].<br/>
+Artwork by [Brad Ashburn][bashburn].
 
 [fweinb]: https://twitter.com/FWeinb
 [codepen-blog]: http://codepen.io/FWeinb/blog/quick-tip-svg-use-style-two-colors
 [codepen-demo]: http://codepen.io/betravis/pen/Lmjlc
+[bashburn]: http://thenounproject.com/bashburn/

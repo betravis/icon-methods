@@ -60,36 +60,32 @@ Browser support should roughly map to support for [SVG fragment identifiers][can
 
 ## Safari Issues
 {: #safari-issues }
-There is a [significant issue][wk-bug] that causes problems when loading a server SVG file and then using fragment ids with it. This affects both [icon stacks][icon-stacks] and SVG sprite sheets. There are a couple potential workarounds:
+While the [original issue][wk-bug] in Safari 7.1 has been fixed as of Safari 9, the fix does not work for custom viewboxes on an svg as image. This may fix the original problem with [icon stacks][icon-stacks], though. There are a couple potential workarounds.
 
 1. Revert to using the image as a CSS background and size/position it as a sprite sheet
-2. Repeat the image element, and hide the first with a negative right margin (works with custom views)
-3. Use a separate query string on each icon (works with custom view boxes)
+2. Fragment identifiers specifying a viewBox will work with the `object` or `iframe` elements.
+3. Fragment identifiers specifying a custom view element in the SVG will work with `iframe` elements.
 
-Repeating the image element looks like:
+So, your best bet is probably to use either `iframe` with a `view` element id:
 
-    <img src='bunnies.svg#carrot-bunny' style='margin-right:-width'>
-    <img src='bunnies.svg#carrot-bunny'>
+    <iframe src='bunnies.svg#carrot-bunny'></iframe>
 
 <figure>
-<img class='icon single hack' src='resources/bunny-sprite-sheet.svg#carrot-bunny'>
-<img class='icon single' src='resources/bunny-sprite-sheet.svg#carrot-bunny'>
-<img class='icon single hack' src='resources/bunny-sprite-sheet.svg#happy-bunny'>
-<img class='icon single' src='resources/bunny-sprite-sheet.svg#happy-bunny'>
-<img class='icon single hack' src='resources/bunny-sprite-sheet.svg#sad-bunny'>
-<img class='icon single' src='resources/bunny-sprite-sheet.svg#sad-bunny'>
+<iframe class='icon single' src='resources/bunny-sprite-sheet.svg#carrot-bunny'></iframe>
+<iframe class='icon single' src='resources/bunny-sprite-sheet.svg#happy-bunny'></iframe>
+<iframe class='icon single' src='resources/bunny-sprite-sheet.svg#sad-bunny'></iframe>
 </figure>
 
-Using separate query strings looks like:
+Or to use `object` with a custom `viewBox` fragment id:
 
-    <img src='bunnies.svg?id=one#svgView(viewBox(0,0,100,100))'>
-    <img src='bunnies.svg?id=two#svgView(viewBox(100,0,100,100))'>
-    <img src='bunnies.svg?id=three#svgView(viewBox(200,0,100,100))'>
+    <object type='image/svg+xml' data='bunnies.svg?id=one#svgView(viewBox(0,0,100,100))'></object>
+    <object type='image/svg+xml' data='bunnies.svg?id=two#svgView(viewBox(100,0,100,100))'></object>
+    <object type='image/svg+xml' data='bunnies.svg?id=three#svgView(viewBox(200,0,100,100))'></object>
 
 <figure>
-<img class='icon single' src='resources/bunny-sprite-sheet.svg?id=one#svgView(viewBox(0,0,100,100))'>
-<img class='icon single' src='resources/bunny-sprite-sheet.svg?id=two#svgView(viewBox(100,0,100,100))'>
-<img class='icon single' src='resources/bunny-sprite-sheet.svg?id=three#svgView(viewBox(200,0,100,100))'>
+<object class='icon single' type='image/svg+xml' data='resources/bunny-sprite-sheet.svg#svgView(viewBox(0,0,100,100))'></object>
+<object class='icon single' type='image/svg+xml' data='resources/bunny-sprite-sheet.svg#svgView(viewBox(100,0,100,100))'></object>
+<object class='icon single' type='image/svg+xml' data='resources/bunny-sprite-sheet.svg#svgView(viewBox(200,0,100,100))'></object>
 </figure>
 
 ## Notes &amp; Credits
@@ -98,4 +94,6 @@ SVG sprite sheets are similar to [icon stacks][icon-stacks], and unfortunately s
 
 Icons are public domain from Brad Ashburn over on [the Noun Project][bashburn]. Inspired by the comments on a [WebKit bug][original-bug] about fragment identifier support.
 
-<em>Update 10.23:</em> This article originally claimed full support in new versions of Safari. However, in most cases SVG sprite sheets will not work there without using a workaround. The article has been updated, and a full section added on [support in Safari](#safari-issues).
+<em>Update 10.23.15:</em> This article originally claimed full support in new versions of Safari. However, in most cases SVG sprite sheets will not work there without using a workaround. The article has been updated, and a full section added on [support in Safari](#safari-issues).
+
+<em>Update 11.08.15:</em> With Safari 9, image elements basically ignore a custom `viewBox` on SVG. See [support in Safari](#safari-issues) for more info.
